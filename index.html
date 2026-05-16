@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT para Ingenieros y Arquitectos | Precios unitarios</title>
+<title>ChatGPT para Ingenieros y Arquitectos | Taller online</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -20,37 +20,92 @@
   --soft:#7f8894;
   --accent:#d3a25f;
   --accent-soft:rgba(211,162,95,.14);
+  --green:#25d366;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Manrope',system-ui,sans-serif;background:radial-gradient(circle at top right,rgba(211,162,95,.08),transparent 24%),var(--bg);color:var(--muted);line-height:1.65}
-a{text-decoration:none;color:inherit}.frame{max-width:1180px;margin:0 auto;padding:0 24px}
-.nav{padding:18px 0}.nav-inner{display:flex;justify-content:space-between;align-items:center;gap:14px}.badge{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:800;font-size:.92rem;border:1px solid transparent}.btn-primary{background:var(--accent);color:#22160a}.btn-secondary{background:transparent;color:var(--fg);border-color:var(--line)}
-.btn-wa{background:#25d366;color:#fff}.nav-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.hero{padding:44px 0 22px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:end}.hero h1{color:var(--fg);font-size:clamp(3rem,6vw,5.4rem);line-height:.95;letter-spacing:-.05em;font-weight:800;max-width:10ch}.hero h1 em{font-family:'DM Serif Display',serif;font-style:italic;font-weight:400;color:var(--accent)}.hero p{margin-top:18px;max-width:58ch;font-size:1.03rem}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
-.hero-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,var(--surface),rgba(26,32,40,.88))}.hero-card .label,.section-label{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800;margin-bottom:12px}.hero-card h3{color:var(--fg);font-size:1.2rem;line-height:1.08;letter-spacing:-.02em;margin-bottom:10px}.hero-card ul{list-style:none}.hero-card li{padding:12px 0;border-top:1px solid var(--line-soft)}.hero-card li:first-child{border-top:none;padding-top:0}
+a{text-decoration:none;color:inherit}
+.frame{max-width:1180px;margin:0 auto;padding:0 24px}
+.nav{padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.badge{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--muted);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:10px;font-weight:800;font-size:.92rem;border:1px solid transparent;transition:transform .2s ease,opacity .2s ease}
+.btn:hover{transform:translateY(-1px);opacity:.96}
+.btn-primary{background:var(--accent);color:#22160a}
+.btn-secondary{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn-wa{background:var(--green);color:#fff}
+.nav-actions,.hero-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.section-label{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800;margin-bottom:12px}
+.hero{padding:46px 0 26px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.hero-copy{padding-right:10px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--fg);font-size:.8rem;font-weight:700;letter-spacing:.04em;margin-bottom:18px}
+.hero h1{color:var(--fg);font-size:clamp(2.8rem,5.4vw,5.4rem);line-height:.95;letter-spacing:-.05em;font-weight:800;max-width:12ch}
+.hero-subtitle{margin-top:16px;color:var(--accent);font-size:clamp(1rem,2vw,1.25rem);text-transform:uppercase;letter-spacing:.08em;font-weight:800}
+.hero p{margin-top:18px;max-width:60ch;font-size:1.03rem}
+.hero-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.hero-points div{padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.02)}
+.hero-points strong{display:block;color:var(--fg);font-size:.98rem;margin-bottom:4px}
+.hero-card{padding:24px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(180deg,var(--surface),rgba(26,32,40,.88))}
 .portrait-shell{margin-bottom:18px;border-radius:18px;overflow:hidden;border:1px solid var(--line-soft);background:linear-gradient(180deg,#151922,#0d1015);position:relative;padding:14px}
-.portrait-shell img{display:block;width:100%;height:300px;object-fit:contain;object-position:center center;opacity:.94}
+.portrait-shell img{display:block;width:100%;height:320px;object-fit:contain;object-position:center center;opacity:.94}
 .portrait-shell::after{content:'';position:absolute;inset:auto 0 0 0;height:44%;background:linear-gradient(180deg,transparent,rgba(11,13,16,.78))}
 .portrait-label{position:absolute;left:16px;bottom:14px;z-index:1;color:var(--fg);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
-.section{padding:30px 0}.big-panel{padding:28px;border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.02)}
-.manifesto{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;align-items:start}.manifesto h2,.section h2{color:var(--fg);font-size:clamp(1.8rem,4vw,3rem);line-height:.98;letter-spacing:-.04em;max-width:9ch}.manifesto p{max-width:58ch}
-.quote-line{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Serif Display',serif;color:var(--fg);font-size:clamp(1.6rem,3.5vw,2.7rem);line-height:1.02;letter-spacing:-.03em;max-width:18ch}
-.dual{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:var(--surface);border:1px solid var(--line-soft);border-radius:20px;padding:22px}.card h3{color:var(--fg);font-size:1.1rem;letter-spacing:-.02em;margin-bottom:10px}.card p{font-size:.95rem}.card ul{list-style:none;margin-top:10px}.card li{padding:10px 0;border-top:1px solid var(--line-soft)}.card li:first-child{border-top:none;padding-top:0}
-.method{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.method .card{background:linear-gradient(180deg,var(--surface),var(--surface-2))}.method strong{display:block;color:var(--accent);font-size:1.6rem;line-height:1;margin-bottom:14px}
-.showcase{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.showcase-main{padding:24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),rgba(18,22,28,.8))}.showcase-main h3{color:var(--fg);font-size:1.8rem;line-height:1;letter-spacing:-.04em;margin-bottom:12px}.showcase-mini{display:grid;gap:14px}.mini{padding:18px;border:1px solid var(--line-soft);background:var(--surface);border-radius:18px}.mini strong{display:block;color:var(--fg);font-size:.98rem;margin-bottom:6px}
-.price-band{display:grid;grid-template-columns:1fr .8fr;gap:18px;align-items:end;padding:30px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}.price-copy h2{max-width:10ch}.price-old{margin:18px 0 6px;color:var(--soft);text-decoration:line-through}.price{color:var(--fg);font-size:4.6rem;line-height:1;letter-spacing:-.07em;font-weight:800}.price span{font-size:1rem;color:var(--accent);letter-spacing:.1em;vertical-align:super}
+.hero-card h3,.card h3,.showcase-main h3{color:var(--fg);letter-spacing:-.03em}
+.hero-card h3{font-size:1.28rem;line-height:1.08;margin-bottom:10px}
+.hero-card ul,.card ul{list-style:none}
+.hero-card li,.card li{padding:12px 0;border-top:1px solid var(--line-soft)}
+.hero-card li:first-child,.card li:first-child{border-top:none;padding-top:0}
+.section{padding:30px 0}
+.big-panel{padding:28px;border:1px solid var(--line);border-radius:26px;background:rgba(255,255,255,.02)}
+.manifesto{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}
+.manifesto h2,.section h2,.price-copy h2{color:var(--fg);font-size:clamp(1.9rem,4vw,3rem);line-height:.98;letter-spacing:-.04em}
+.manifesto p{max-width:58ch}
+.quote-line{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);font-family:'DM Serif Display',serif;color:var(--fg);font-size:clamp(1.5rem,3vw,2.5rem);line-height:1.04;letter-spacing:-.03em;max-width:18ch}
+.triad,.dual,.classes,.showcase,.price-band{display:grid;gap:18px}
+.triad{grid-template-columns:repeat(3,1fr)}
+.dual{grid-template-columns:1fr 1fr}
+.classes{grid-template-columns:repeat(3,1fr)}
+.card,.mini{background:var(--surface);border:1px solid var(--line-soft);border-radius:20px;padding:22px}
+.card h3{font-size:1.15rem;margin-bottom:10px}
+.card p,.mini p{font-size:.95rem}
+.card strong.kicker{display:inline-block;color:var(--accent);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.cos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.cos-step{padding:20px;border-radius:18px;background:linear-gradient(180deg,var(--surface),var(--surface-2));border:1px solid var(--line-soft)}
+.cos-step strong{display:block;color:var(--accent);font-size:1.5rem;line-height:1;margin-bottom:12px}
+.showcase{grid-template-columns:1.1fr .9fr}
+.showcase-main{padding:24px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--surface),rgba(18,22,28,.8))}
+.showcase-main h3{font-size:1.8rem;line-height:1;margin-bottom:12px}
+.showcase-mini{display:grid;gap:14px}
+.mini strong{display:block;color:var(--fg);font-size:1rem;margin-bottom:6px}
+.price-band{grid-template-columns:1fr .85fr;align-items:end;padding:30px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01))}
+.price-old{margin:18px 0 6px;color:var(--soft);text-decoration:line-through}
+.price{color:var(--fg);font-size:4.6rem;line-height:1;letter-spacing:-.07em;font-weight:800}
+.price span{font-size:1rem;color:var(--accent);letter-spacing:.1em;vertical-align:super}
+.price-list{list-style:none;margin-top:18px}
+.price-list li{padding:10px 0;border-top:1px solid var(--line-soft)}
+.price-list li:first-child{border-top:none;padding-top:0}
 .footer{padding:26px 0 48px;color:var(--soft);font-size:.84rem}
-@media(max-width:980px){.hero-grid,.manifesto,.dual,.method,.showcase,.price-band{grid-template-columns:1fr}.hero h1{max-width:11ch}}
+@media(max-width:980px){
+  .hero-grid,.manifesto,.triad,.dual,.classes,.showcase,.price-band,.cos-grid{grid-template-columns:1fr}
+  .hero-copy{padding-right:0}
+  .hero h1{max-width:none}
+  .hero-points{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .nav-inner{align-items:flex-start;flex-direction:column}
+  .price{font-size:3.5rem}
+}
 </style>
 </head>
 <body>
 <div class="frame">
   <header class="nav">
     <div class="nav-inner">
-      <div class="badge">Precios unitarios · Presupuestos de obra · En vivo</div>
+      <div class="badge">8, 9 y 10 de junio · Taller online · Cupos limitados</div>
       <div class="nav-actions">
-        <a class="btn btn-wa" href="https://wa.me/573152226113?text=Hola%2C%20quiero%20informacion%20del%20taller%20de%20precios%20unitarios" target="_blank">WhatsApp</a>
-        <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank">Pagar 98 USD</a>
+        <a class="btn btn-wa" href="https://wa.me/573152226113?text=Hola%2C%20quiero%20informacion%20del%20taller%20ChatGPT%20para%20Ingenieros%20y%20Arquitectos" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank" rel="noopener noreferrer">Reservar cupo</a>
       </div>
     </div>
   </header>
@@ -58,13 +113,19 @@ a{text-decoration:none;color:inherit}.frame{max-width:1180px;margin:0 auto;paddi
   <main>
     <section class="hero">
       <div class="hero-grid">
-        <div>
-          <span class="section-label">8 al 10 de junio · En vivo</span>
-          <h1>IA aplicada a <em>precios unitarios</em> y presupuestos de obra</h1>
-          <p>Dirigido a profesionales que quieren usar IA con seriedad para estructurar actividades, analizar pliegos, apoyar presupuestos y producir documentos técnicos con mejor criterio y menos fricción operativa.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank">Reservar cupo</a>
-            <a class="btn btn-secondary" href="#metodo">Ver metodología</a>
+        <div class="hero-copy">
+          <div class="eyebrow">Taller intensivo para obra, licitaciones y presupuestos</div>
+          <h1>En 3 d&iacute;as podr&aacute;s ahorrarte 5 a&ntilde;os de licitaciones fallidas pasando tus presupuestos de semanas a horas sin ser experto en Excel.</h1>
+          <div class="hero-subtitle">ChatGPT para Ingenieros y Arquitectos</div>
+          <p>Aprende a usar IA dentro de un flujo real de trabajo para previsualizar, validar y exportar informaci&oacute;n t&eacute;cnica sin perder criterio profesional. No es teor&iacute;a de prompts: es un sistema para avanzar presupuestos, pliegos, contratos y actas con m&aacute;s velocidad y claridad.</p>
+          <div class="hero-points">
+            <div><strong>De semanas a horas</strong><span>Organiza presupuestos y documentos t&eacute;cnicos con un proceso m&aacute;s r&aacute;pido.</span></div>
+            <div><strong>Sistema aplicable</strong><span>Usa el modelo COS para que la IA entienda la obra y entregue mejor salida.</span></div>
+            <div><strong>Sin Excel avanzado</strong><span>Trabaja con IA aunque hoy no seas experto en automatizaci&oacute;n ni hojas de c&aacute;lculo.</span></div>
+          </div>
+          <div class="hero-actions" style="margin-top:26px">
+            <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank" rel="noopener noreferrer">Reservar cupo</a>
+            <a class="btn btn-secondary" href="#aprendes">Ver lo que aprender&aacute;s</a>
           </div>
         </div>
         <aside class="hero-card">
@@ -72,13 +133,13 @@ a{text-decoration:none;color:inherit}.frame{max-width:1180px;margin:0 auto;paddi
             <img src="./profile.png" alt="Ing. Daniel Medina">
             <div class="portrait-label">Ing. Daniel Medina</div>
           </div>
-          <span class="label">Para quién encaja mejor</span>
-          <h3>Cuando el foco está en costos, presupuestos y lectura técnica</h3>
+          <span class="section-label">Para qui&eacute;n es</span>
+          <h3>Para profesionales que quieren usar IA en serio dentro de su flujo de obra</h3>
           <ul>
-            <li>Profesionales que trabajan actividades y precios unitarios</li>
-            <li>Quienes necesitan revisar pliegos y licitaciones</li>
-            <li>Quienes preparan presupuestos y documentos de soporte</li>
-            <li>Quienes quieren usar IA sin perder control técnico</li>
+            <li>Ingenieros y arquitectos que preparan presupuestos y licitaciones.</li>
+            <li>Profesionales que revisan pliegos, contratos y alcances t&eacute;cnicos.</li>
+            <li>Quienes necesitan actas, informes y soportes con su formato espec&iacute;fico.</li>
+            <li>Quienes quieren automatizar sin perder validaci&oacute;n ni criterio profesional.</li>
           </ul>
         </aside>
       </div>
@@ -87,63 +148,96 @@ a{text-decoration:none;color:inherit}.frame{max-width:1180px;margin:0 auto;paddi
     <section class="section">
       <div class="big-panel manifesto">
         <div>
-          <span class="section-label">Declaración central</span>
-          <h2>La herramienta no calcula su criterio. Le ayuda a ejercerlo mejor.</h2>
+          <span class="section-label">Promesa central</span>
+          <h2>La IA no reemplaza su criterio. Le devuelve tiempo para ejercerlo mejor.</h2>
         </div>
         <div>
-          <p>La IA no reemplaza la lectura del proyecto, la validación de actividades, la revisión de cantidades ni la responsabilidad profesional. Lo que sí puede hacer, si usted aprende a dirigirla bien, es ayudarle a estructurar, resumir, redactar y acelerar parte del trabajo que hoy consume demasiadas horas.</p>
-          <div class="quote-line">No es una promesa de magia. Es una promesa de mejor método.</div>
+          <p>Este taller est&aacute; dise&ntilde;ado para profesionales de obra que no quieren otro chat improvisado, sino un proceso concreto para pensar mejor la informaci&oacute;n, validarla con criterio y sacarla en un formato utilizable. La meta es clara: pasar de trabajo manual disperso a un flujo t&eacute;cnico m&aacute;s r&aacute;pido, m&aacute;s ordenado y m&aacute;s preciso.</p>
+          <div class="quote-line">No es magia. Es m&eacute;todo aplicado a presupuestos, licitaciones y documentaci&oacute;n t&eacute;cnica.</div>
         </div>
+      </div>
+    </section>
+
+    <section class="section" id="pilares">
+      <span class="section-label">Los 3 pilares</span>
+      <h2 style="margin-bottom:18px">As&iacute; se usa la IA dentro del taller</h2>
+      <div class="triad">
+        <article class="card">
+          <strong class="kicker">Previsualizar</strong>
+          <h3>Entender la obra antes de pedir cualquier salida</h3>
+          <p>Aqu&iacute; trabajamos con el sistema COS para que la IA reciba el contexto correcto, entienda el objetivo real y responda con una salida utilizable.</p>
+        </article>
+        <article class="card">
+          <strong class="kicker">Validar</strong>
+          <h3>Filtrar errores antes de que se vuelvan retrabajo</h3>
+          <p>Aprendes a revisar lo que la IA produce, detectar vac&iacute;os, comparar contra pliegos y sostener el criterio profesional antes de usar cualquier resultado.</p>
+        </article>
+        <article class="card">
+          <strong class="kicker">Exportar</strong>
+          <h3>Llevar la salida al formato que necesitas</h3>
+          <p>El objetivo no es una respuesta bonita en pantalla, sino una salida lista para usar en tu trabajo: tablas, estructura, borradores o documentos con formato claro.</p>
+        </article>
       </div>
     </section>
 
     <section class="section">
-      <div class="dual">
-        <article class="card">
-          <span class="section-label">Qué sí hace</span>
-          <h3>Apoyo útil para precios unitarios y presupuestos</h3>
-          <ul>
-            <li>Ayuda a estructurar actividades y alcances.</li>
-            <li>Apoya la lectura de pliegos y licitaciones.</li>
-            <li>Facilita borradores de informes, actas y cartas técnicas.</li>
-            <li>Organiza mejor la salida de información para trabajarla después.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <span class="section-label">Qué no hace</span>
-          <h3>No reemplaza la validación final</h3>
-          <ul>
-            <li>No define por usted el precio correcto.</li>
-            <li>No sustituye la revisión profesional de rendimiento o alcance.</li>
-            <li>No evita la necesidad de corregir una salida floja.</li>
-            <li>Si se usa sin método, vuelve a ser solo un chat más.</li>
-          </ul>
-        </article>
+      <div class="big-panel">
+        <span class="section-label">Sistema COS</span>
+        <h2>Contexto, Objetivo y Salida para que la IA s&iacute; entienda la obra</h2>
+        <p style="margin-top:14px;max-width:70ch">Dentro de Previsualizar trabajamos con el sistema COS: Contexto, Objetivo y Salida. Esto permite que la IA entienda la obra, sepa exactamente qu&eacute; necesitas lograr y entregue el resultado en el formato que deseas exportar.</p>
+        <div class="cos-grid">
+          <article class="cos-step">
+            <strong>01</strong>
+            <h3>Contexto</h3>
+            <p>Tipo de proyecto, alcance, especialidad, restricciones, documentos base y situaci&oacute;n real de la obra.</p>
+          </article>
+          <article class="cos-step">
+            <strong>02</strong>
+            <h3>Objetivo</h3>
+            <p>Qu&eacute; necesitas lograr con precisi&oacute;n: analizar, estructurar, resumir, redactar, comparar o preparar informaci&oacute;n.</p>
+          </article>
+          <article class="cos-step">
+            <strong>03</strong>
+            <h3>Salida</h3>
+            <p>Formato exacto de entrega para poder exportar y trabajar despu&eacute;s: listas, tablas, actas, matrices o bases de presupuesto.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="metodo">
-      <span class="section-label">Metodología</span>
-      <h2 style="margin-bottom:18px">Cuatro pasos para aterrizar la IA al trabajo técnico</h2>
-      <div class="method">
-        <article class="card"><strong>01</strong><h3>Contexto del proyecto</h3><p>Tipo de obra, alcance, situación, especialidad y restricción técnica.</p></article>
-        <article class="card"><strong>02</strong><h3>Objetivo preciso</h3><p>Qué necesita: estructura, resumen, tabla, documento o revisión.</p></article>
-        <article class="card"><strong>03</strong><h3>Salida esperada</h3><p>Formato claro para que la información salga más ordenada y útil.</p></article>
-        <article class="card"><strong>04</strong><h3>Validación profesional</h3><p>Revisar, corregir e iterar antes de usar cualquier salida en serio.</p></article>
+    <section class="section" id="aprendes">
+      <span class="section-label">Lo que aprende en el taller online</span>
+      <h2 style="margin-bottom:18px">Tres clases para construir un flujo completo de automatizaci&oacute;n</h2>
+      <div class="classes">
+        <article class="card">
+          <strong class="kicker">Clase 1</strong>
+          <h3>Modelo de IA sin costo y ecosistema de trabajo</h3>
+          <p>Aprender&aacute;s a descargar un modelo de IA sin costo y a crear un ecosistema completo para automatizar tareas de obra. Adem&aacute;s, podr&aacute;s ahorrar hasta 100 USD al mes en herramientas como Claude.</p>
+        </article>
+        <article class="card">
+          <strong class="kicker">Clase 2</strong>
+          <h3>De semanas de trabajo a solo horas</h3>
+          <p>Ver&aacute;s c&oacute;mo analizar y estructurar hasta 80 p&aacute;ginas de pliegos o contratos en 30 minutos, y c&oacute;mo generar un acta de obra completa en 10 minutos con tu formato espec&iacute;fico.</p>
+        </article>
+        <article class="card">
+          <strong class="kicker">Clase 3</strong>
+          <h3>80 precios unitarios en una hora sin perder precisi&oacute;n</h3>
+          <p>Aprender&aacute;s a crear precios unitarios con un flujo replicable para acelerar tu producci&oacute;n sin sacrificar revisi&oacute;n, coherencia ni criterio t&eacute;cnico.</p>
+        </article>
       </div>
     </section>
 
     <section class="section">
       <div class="showcase">
         <div class="showcase-main">
-          <span class="section-label">Casos de uso</span>
-          <h3>Dónde esta propuesta se vuelve prácticamente útil</h3>
-          <p>Cuando usted necesita avanzar presupuestos, leer licitaciones, ordenar actividades para precios unitarios o reducir fricción al preparar documentos técnicos. La IA entra como apoyo a una rutina real de trabajo, no como curiosidad tecnológica.</p>
+          <span class="section-label">Aplicaci&oacute;n real</span>
+          <h3>Esto no es solo teor&iacute;a de prompts</h3>
+          <p>El taller muestra c&oacute;mo usar la IA dentro de un flujo completo de automatizaci&oacute;n, sin perder el criterio profesional. La idea es que puedas tomar lo aprendido y llevarlo a presupuestos, licitaciones, actas, pliegos y soportes reales de trabajo.</p>
         </div>
         <div class="showcase-mini">
-          <div class="mini"><strong>Pliegos</strong><p>Extracción más ordenada de requisitos, fechas y alertas.</p></div>
-          <div class="mini"><strong>Presupuestos</strong><p>Base más clara para actividades y soporte documental.</p></div>
-          <div class="mini"><strong>Informes</strong><p>Primer borrador mejor estructurado para revisar y cerrar más rápido.</p></div>
+          <div class="mini"><strong>Pliegos y contratos</strong><p>Analiza y estructura documentos extensos en menos tiempo.</p></div>
+          <div class="mini"><strong>Actas y soportes</strong><p>Genera documentos con tu formato espec&iacute;fico y luego rev&iacute;salos con criterio.</p></div>
+          <div class="mini"><strong>Presupuestos</strong><p>Pasa de semanas de trabajo a horas con una base mejor organizada.</p></div>
         </div>
       </div>
     </section>
@@ -151,23 +245,28 @@ a{text-decoration:none;color:inherit}.frame{max-width:1180px;margin:0 auto;paddi
     <section class="section">
       <div class="price-band">
         <div class="price-copy">
-          <span class="section-label">Oferta</span>
-          <h2>Una propuesta especializada, no una clase genérica de IA</h2>
+          <span class="section-label">Oferta de lanzamiento</span>
+          <h2>Accede al taller online del 8, 9 y 10 de junio</h2>
           <div class="price-old">Antes 297 USD</div>
           <div class="price">98 <span>USD</span></div>
+          <ul class="price-list">
+            <li>Cupos limitados para esta edici&oacute;n.</li>
+            <li>Puedes pagarlo hasta en 12 cuotas sin inter&eacute;s en Colombia, Per&uacute; y Chile.</li>
+            <li>La tarjeta de cr&eacute;dito debe tener cupo disponible por el valor total del taller.</li>
+          </ul>
         </div>
         <div>
-          <p>Del 8 al 10 de junio. Tres sesiones en vivo para aprender a usar IA con un foco serio en precios unitarios, presupuestos, pliegos y documentación técnica.</p>
+          <p>Si quieres dejar de improvisar con IA y aprender un sistema concreto para presupuestos, licitaciones y documentos t&eacute;cnicos, esta es la edici&oacute;n para entrar. La p&aacute;gina de venta oficial est&aacute; en <a href="https://iaobra.lat/" target="_blank" rel="noopener noreferrer" style="color:var(--fg);text-decoration:underline">iaobra.lat</a>.</p>
           <div class="hero-actions" style="margin-top:20px">
-            <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank">Quiero entrar</a>
-            <a class="btn btn-wa" href="https://wa.me/573152226113?text=Hola%2C%20quiero%20informacion%20del%20taller%20de%20precios%20unitarios" target="_blank">Escribir por WhatsApp</a>
+            <a class="btn btn-primary" href="https://pay.hotmart.com/A105369937A?off=i19zfmis" target="_blank" rel="noopener noreferrer">Quiero entrar</a>
+            <a class="btn btn-wa" href="https://wa.me/573152226113?text=Hola%2C%20quiero%20informacion%20del%20taller%20ChatGPT%20para%20Ingenieros%20y%20Arquitectos" target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">D. Medina · Enfoque especializado en precios unitarios y presupuestos</footer>
+  <footer class="footer">D. Medina · ChatGPT para Ingenieros y Arquitectos · IA aplicada a obra, licitaciones y presupuestos</footer>
 </div>
 </body>
 </html>

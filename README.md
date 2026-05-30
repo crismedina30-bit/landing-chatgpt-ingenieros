@@ -1,1 +1,1 @@
-Landing page - ChatGPT para Ingenieros y Arquitectos
+Landing page - Prokector: Mentor en Obra 24/7
